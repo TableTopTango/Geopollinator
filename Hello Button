@@ -2,11 +2,14 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Hello Button</title>
 </head>
 <body>
 	<div class="header">
 		<p><center>Click the button below, and it will say hello</center></p>
+	</div>
+	<div class="button">
+		<p><center>click me!</center></p>
 	</div>
 </body>
 </html>
