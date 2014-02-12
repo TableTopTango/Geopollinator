@@ -6,10 +6,10 @@
 </head>
 <body>
 	<div class="header">
-		<p><center>Click the button below, and it will say hello</center></p>
+		<p><center><h2>Click the button below, and it will say hello</h2></center></p>
 	</div>
 	<div class="button">
-		<p><center>click me!</center></p>
+		<p><center><h1>click me!</h1></center></p>
 	</div>
 </body>
 </html>

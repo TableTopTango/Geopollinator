@@ -1,11 +1,14 @@
 .header{
-	border:;
-	background-color:;
-	width:;
-	height:;
+	border:5px solid black;
+	background-color:yellow;
+	width:100%;
+	height:15%;
+	border-radius:13px;
+	margin-top:-14px;
 	
 }
 .button{
 	border:3px solid black;
-	background-color:
+	background-color:blue;
+	clear:both;
 }
