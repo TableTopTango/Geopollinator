@@ -8,9 +8,13 @@
 	
 }
 .button{
-	border:3px solid black;
+	border:10px solid black;
 	background-color:blue;
 	clear:both;
-	width:200px
-	height:100px
+	width:200px;
+	height:100px;
 }
+.continent{
+	border:10px solid green;
+	margin:20px;
+	padding:20px;
