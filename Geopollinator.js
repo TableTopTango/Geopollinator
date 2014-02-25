@@ -24,4 +24,3 @@ var choose = function(){
 			break;
 	};
 };
-choose();
