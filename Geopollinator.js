@@ -19,7 +19,7 @@ var choose = function(){
 		case "EUROPE":
 			document.write ("The mother land, for most of the Americans.");
 			break;
-		case "SOUTH AMERICA"
+		case "SOUTH AMERICA":
 			document.write ("The continent that nobody remembers.")
 			break;
 		default:
