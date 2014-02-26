@@ -2,7 +2,7 @@ var choose = function(){
 	var continent = prompt("Please type your continent.").toUpperCase();
 	switch(continent) {
 		case "AFRICA":
-			document.write ("There are a lot of countries there!");
+			document.write ("There are a lot of countries there.");
 			break;
 		case "NORTH AMERICA":
 			document.write ("That is where I live!");
