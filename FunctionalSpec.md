@@ -37,8 +37,8 @@ Geopollinator
 	print out and test their students on.
 
 **Goals:**
-1. Run a JavaScript in an html file.
-2.  Create Geopollinator code in JavaScript
+1. Run a JavaScript in an html file. MET
+2.  Create Geopollinator code in JavaScript.
 3. Create the html code for Geopollinator.
 4. Merge the codes somehow.
 5. Debug the thing.
