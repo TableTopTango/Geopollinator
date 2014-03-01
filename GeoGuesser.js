@@ -6,12 +6,25 @@ for (i in worldmap.names) {
 
 var countriesClicked = [];
 
+//remove element from array
+function removeByValue(arr, val) {
+    for(var i=0; i<arr.length; i++) {
+        if(arr[i] == val) {
+            arr.splice(i, 1);
+            break;
+        }
+    }
+}
+
 function clickCountryCell(tableCell) {
     var countryClicked = tableCell.innerHTML;
-    console.log(countryClicked);
-    countriesClicked.push(countryClicked);
-    console.log(countriesClicked);
-    tableCell.className="selectedCell";
+    if (tableCell.className=="selectedCell") {
+        removeByValue(countriesClicked, countryClicked);
+        tableCell.className="deselectedCell";
+    } else {
+        countriesClicked.push(countryClicked);
+        tableCell.className="selectedCell";
+    }
 }
 
 var countryToFind;
