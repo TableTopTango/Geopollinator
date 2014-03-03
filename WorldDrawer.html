@@ -35,7 +35,9 @@
       <div id="countriesDiv"><table id="countries"></table></div>
       <input type="button" onclick="startStudying();" value="Start Studying" />
   <p id="message"></p>
+  <div id="zoomer" onmousedown="mouseDown(event, this);" onmouseup="mouseUp(event, this);" onmousemove="mouseMove(event, this);" onmousewheel="scroll(event, this);" onmouseover="mouseover(event, this);" onmouseout="mouseout(event, this);">
     <div id="container" hidden="true" hidden></div>
+    </div>
     <script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v5.0.1.min.js"></script>
     <!--<script src="http://www.html5canvastutorials.com/demos/assets/worldMap.js"></script>-->
     <script src="http://raphaeljs.com/world/world.js"></script>

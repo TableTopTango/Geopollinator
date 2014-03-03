@@ -1,17 +1,23 @@
 var WIDTH=1200;
 var HEIGHT=600;
 
+var MAX_BORDER = 30;
+
+var stage;
+var mapLayer;
+var topLayer;
 function drawMapWithCountryList(countryList) {
-    var stage = new Kinetic.Stage({
+    stage = new Kinetic.Stage({
                                   container: 'container',
                                   width: WIDTH,
                                   height: HEIGHT,
+                              draggable: true,
                                   });
-    var mapLayer = new Kinetic.Layer({
+    mapLayer = new Kinetic.Layer({
                                      //y: 20,
                                      //scale: 0.6
                                      });
-    var topLayer = new Kinetic.Layer({
+    topLayer = new Kinetic.Layer({
                                      //y: 20,
                                      //scale: 0.6
                                      });
@@ -44,6 +50,7 @@ function drawMapWithCountryList(countryList) {
         path.on('mouseout', function() {
                 this.setFill('#eee');
                 this.moveTo(mapLayer);
+                mapLayer.draw();
                 topLayer.draw();
                 });
         
@@ -79,6 +86,12 @@ function drawMapWithCountryList(countryList) {
             }
         }
     }
+    
+    //add randomized borders
+    minX -= Math.floor(Math.random()*MAX_BORDER);
+    minY -= Math.floor(Math.random()*MAX_BORDER);
+    maxX += Math.floor(Math.random()*MAX_BORDER);
+    maxY += Math.floor(Math.random()*MAX_BORDER);
     
     stage.offsetX(minX);
     stage.offsetY(minY);
