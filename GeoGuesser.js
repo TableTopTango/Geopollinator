@@ -48,8 +48,8 @@ function mouseMove(event, obj) {
         position.x+=xChange;
         position.y+=yChange;
         stage.setPosition(position);
-        mapLayer.draw();
-        topLayer.draw();
+        //mapLayer.draw();
+        //topLayer.draw();
         prevMousePos=currentMousePos;
     }
 }
