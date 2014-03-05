@@ -105,7 +105,7 @@ function checkCorrectCountry(countryName) {
         if (countryToFind) {
             document.getElementById("message").innerHTML="Good Job! You found "+countryName+". Now look for "+countryToFind+".";
         } else {
-            document.getElementById("message").innerHTML="You found them all! Good job!";
+            document.getElementById("message").innerHTML="You found them all! Good job! I hope that you actually thought that this was a valuable way to study.";
         }
     } else {
         document.getElementById("message").innerHTML="Nope. That is "+countryName+", not "+countryToFind+". Try again.";
