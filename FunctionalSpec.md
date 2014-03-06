@@ -43,3 +43,4 @@ Geopollinator
 4. Merge the codes somehow.
 5. Debug the thing.
 6. Run it out to the public under netdenizen.
+7. Hello
