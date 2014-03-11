@@ -3,6 +3,12 @@ var table = document.getElementById("countries");
 for (i in worldmap.names) {
     table.innerHTML+="<tr><td onclick='clickCountryCell(this)'>"+worldmap.names[i]+"</td></tr>";
 }
+/*var table2 = document.getElementById("continents");
+for (i in worldmap.continents){
+	table2.innerHTML+="<tr><td onclick='clickCountryCell(this)'>"+worldmap.continents[i]+"</td></tr>";
+}
+*/	
+
 
 var countriesClicked = [];
 
