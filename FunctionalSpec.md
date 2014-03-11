@@ -15,7 +15,7 @@ is this country?" and a point-and-click method of finding those
 countries. You will be able to choose which countries that you would
 like to study. 
 
-#Our visual will be as follows:
+##Our visual will be as follows:
 The home screen will have a select list of commonly studied country
 groups (Europe, Middle East etc.). On the top of the page is the main
 opener [what is an "opener?"], it will have a country selection list, 
