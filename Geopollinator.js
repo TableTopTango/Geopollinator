@@ -21,15 +21,17 @@ function removeByValue(arr, val) {
         }
     }
 }
-
+var countryTotal=0
 function clickCountryCell(tableCell) {
     var countryClicked = tableCell.innerHTML;
     if (tableCell.className=="selectedCell") {
         removeByValue(countriesClicked, countryClicked);
         tableCell.className="deselectedCell";
+        countryTotal--
     } else {
         countriesClicked.push(countryClicked);
         tableCell.className="selectedCell";
+        countryTotal++
     }
 }
 
@@ -92,6 +94,7 @@ function mouseout(event, obj) {
 }
 
 var countryToFind;
+var countryCount=0
 
 function startStudying() {
     document.getElementById("countriesDiv").hidden=true;
@@ -99,7 +102,7 @@ function startStudying() {
     countriesClicked.sort(function() {return 0.5 - Math.random()});
     console.log("start studying with countries:"+countriesClicked);
     drawMapWithCountryList(countriesClicked);
-    
+	document.getElementById("count").innerHTML=countryCount+" out of "+countryTotal
     countryToFind=countriesClicked.pop();
     document.getElementById("message").innerHTML="Click on "+countryToFind+".";
 }
@@ -107,6 +110,8 @@ function startStudying() {
 function checkCorrectCountry(countryName) {
     if (countryName==countryToFind) {
         //success
+        countryCount++
+        document.getElementById("count").innerHTML=countryCount+" out of "+countryTotal
         countryToFind=countriesClicked.pop();
         if (countryToFind) {
             document.getElementById("message").innerHTML="Good Job! You found "+countryName+". Now look for "+countryToFind+".";
@@ -117,3 +122,4 @@ function checkCorrectCountry(countryName) {
         document.getElementById("message").innerHTML="Nope. That is "+countryName+", not "+countryToFind+". Try again.";
     }
 }
+//hi
