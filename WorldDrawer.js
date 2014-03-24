@@ -104,4 +104,3 @@ function drawMapWithCountryList(countryList) {
     
     mapLayer.draw();
 }
-//hi
