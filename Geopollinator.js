@@ -112,7 +112,7 @@ function checkCorrectCountry(countryName) {
         } else {
             document.getElementById("message").innerHTML="You found them all! Good job! I hope that you actually thought that this was a valuable way to study.";
         }
-    } else {
+    } else if(countryToFind){
         document.getElementById("message").innerHTML="Nope. That is "+countryName+", not "+countryToFind+". Try again.";
     }
 }
