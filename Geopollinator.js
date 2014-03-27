@@ -86,12 +86,13 @@ function mouseover(event, obj) {
 function mouseout(event, obj) {
     document.body.style.overflow='auto';
 }
-
+var i=0
 var countryToFind;
 var countryCount=0
 document.getElementById("replay").hidden=true;
 
 function startStudying() {
+if(countryTotal>0){
 	document.getElementById("count").hidden=false;
     document.getElementById("countriesDiv").hidden=true;
     document.getElementById("message").hidden=false;
@@ -101,8 +102,8 @@ function startStudying() {
     console.log("start studying with countries:"+countriesClicked);
     drawMapWithCountryList(countriesClicked);
 	document.getElementById("count").innerHTML=countryCount+" out of "+countryTotal
-    countryToFind=countriesClicked.pop();
-    document.getElementById("message").innerHTML="Click on "+countryToFind+".";
+    countryToFind=countriesClicked[i];
+    document.getElementById("message").innerHTML="Click on "+countryToFind+".";}
 }
 
 function checkCorrectCountry(countryName) {
@@ -110,14 +111,15 @@ function checkCorrectCountry(countryName) {
         //success
         countryCount++
         document.getElementById("count").innerHTML=countryCount+" out of "+countryTotal
-        countryToFind=countriesClicked.pop();
-        if (countryToFind) {
+        if (i<countriesClicked.length-1) {
+        	i++
+            countryToFind=countriesClicked[i]
             document.getElementById("message").innerHTML="Good Job! You found "+countryName+". Now look for "+countryToFind+".";
         } else {
             document.getElementById("message").innerHTML="You found them all! Good job! I hope that you actually thought that this was a valuable way to study.";
             document.getElementById("replay").hidden=false;
         }
-    } else if(countryToFind){
+    } else if(i<countriesClicked.length-1){
         document.getElementById("message").innerHTML="Nope. That is "+countryName+", not "+countryToFind+". Try again.";
     }
 }
