@@ -95,6 +95,7 @@ function startStudying() {
 if(countryTotal>0){
 	document.getElementById("count").hidden=false;
     document.getElementById("countriesDiv").hidden=true;
+    document.getElementById("message1").hidden=true;
     document.getElementById("message").hidden=false;
     document.getElementById("start").hidden=true;
     //randomize country list
@@ -124,6 +125,7 @@ function checkCorrectCountry(countryName) {
     }
 }
 function playAgain(){document.getElementById("countriesDiv").hidden=false;
+document.getElementById("message1").hidden=false;
 document.getElementById("replay").hidden=true;
 document.getElementById("start").hidden=false;
 document.getElementById("count").hidden=true;
