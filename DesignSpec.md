@@ -3,15 +3,16 @@ Geopollinator
 
 ##Introduction
 **Geopollinator** is a web based application that will help teach Geopolitics students the countries that they need to learn. This program will ease the pain that is learning random geographical facts. The program will be tailored to include only the countries that will be found on the Geopolitics. This design spec will provide more detailed information on:
-*Client side programming language
 
-*Data storage requirements and tool choices
+*Client side programming language*
 
-*Software test strategy
+*Data storage requirements and tool choices*
 
-*Bug tracking strategy
+*Software test strategy*
 
-*Software deployment instructions
+*Bug tracking strategy*
+
+*Software deployment instructions*
 
 ##Client Side Programming Language
 The languages we are working with are HTML, CSS, and Javascript. These will all be run on the client’s web browser. The server we are running off of does not require the client to store data or otherwise communicate with the user. So the only requirements are that the client’s web browser can understand javascript, HTML, and CSS.
