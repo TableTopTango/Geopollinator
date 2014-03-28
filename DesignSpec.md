@@ -19,5 +19,8 @@ We are planning on having the program have an option to save custom country stud
 We will have humans do the testing. They will be testing general functionality, does the thing work, do you understand how to use it. Testing interface. Random combinations. What does it take for you to break it. Questions like that.
 
 ##Bug Tracking Strategy
+Javascript is not able to be debugged in eclipse so in order to test the debugging capabilities of the program we are going to have to use google chrome to debug the software.
 
 ##Software Deployment Instructions
+We are going to place the software on netdenizen.com. This will allow us to get it out to the general public so long as they have the link to the website.
+
