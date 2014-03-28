@@ -129,5 +129,6 @@ document.getElementById("start").hidden=false;
 document.getElementById("count").hidden=true;
 document.getElementById("message").hidden=true;
 countryCount=0
+i=0
 }
 //hi
