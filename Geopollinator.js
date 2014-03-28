@@ -119,8 +119,9 @@ function checkCorrectCountry(countryName) {
         } else {
             document.getElementById("message").innerHTML="You found them all! Good job! I hope that you actually thought that this was a valuable way to study.";
             document.getElementById("replay").hidden=false;
+            i++
         }
-    } else if(i<countriesClicked.length-1){
+    } else if(i<countriesClicked.length){
         document.getElementById("message").innerHTML="Nope. That is "+countryName+", not "+countryToFind+". Try again.";
     }
 }
