@@ -142,3 +142,12 @@ countryCount=0
 i=0
 }
 //hi
+
+function actualSelectAll() {
+	var table = document.getElementById("countries");
+	for (i in table.rows) {
+		var row = table.rows[i];
+		row.cells[0].className="deselectedCell";
+		clickCountryCell(row.cells[0]);
+	}
+}
