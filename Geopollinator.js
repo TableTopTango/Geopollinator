@@ -113,8 +113,8 @@ function checkCorrectCountry(countryName) {
         countryCount++
         document.getElementById("count").innerHTML=countryCount+" out of "+countryTotal
         if (i<countriesClicked.length-1) {
-        	i++
-            countryToFind=countriesClicked[i]
+        	i++;
+            countryToFind=countriesClicked[i];
             document.getElementById("message").innerHTML="Good Job! You found "+countryName+". Now look for "+countryToFind+".";
         } else {
             document.getElementById("message").innerHTML="You found them all! Good job! I hope that you actually thought that this was a valuable way to study.";
@@ -138,10 +138,10 @@ i=0
 
 function actualSelectAll() {
 	var table = document.getElementById("countries");
-	for (i in table.rows) {
-		var row = table.rows[i];
+	for (irow in table.rows) {
+		var row = table.rows[irow];
 		if (row.cells && row.cells.length>0) {
-			var cell = table.rows[i].cells[0];
+			var cell = row.cells[0];
 			cell.className="deselectedCell";
 			clickCountryCell(cell);
 		}
