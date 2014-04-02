@@ -139,7 +139,8 @@ i=0
 function actualSelectAll() {
 	var table = document.getElementById("countries");
 	for (i in table.rows) {
-		if (table.rows[i].cells.length>0) {
+		var row = table.rows[i];
+		if (row.cells && row.cells.length>0) {
 			var cell = table.rows[i].cells[0];
 			cell.className="deselectedCell";
 			clickCountryCell(cell);
