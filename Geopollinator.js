@@ -15,6 +15,11 @@ function removeByValue(arr, val) {
         }
     }
 }
+
+function selctAll() {
+for(var i in table.cells) {
+
+
 var countryTotal=0
 function clickCountryCell(tableCell) {
     var countryClicked = tableCell.innerHTML;
