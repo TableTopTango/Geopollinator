@@ -17,8 +17,11 @@ function removeByValue(arr, val) {
 }
 
 function selctAll() {
-for(var i in table.cells) {
-
+	for(var jcells in table.cells) {
+		cell.className="deselectedCell";
+		clickCountryCell(cell);
+	}
+}
 
 var countryTotal=0
 function clickCountryCell(tableCell) {
