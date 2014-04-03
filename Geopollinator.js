@@ -26,11 +26,11 @@ function clickCountryCell(tableCell) {
     if (tableCell.className=="selectedCell") {
         removeByValue(countriesClicked, countryClicked);
         tableCell.className="deselectedCell";
-        countryTotal--
+        countryTotal--;
     } else {
         countriesClicked.push(countryClicked);
         tableCell.className="selectedCell";
-        countryTotal++
+        countryTotal++;
     }
 }
 
@@ -94,7 +94,6 @@ function mouseout(event, obj) {
 var i=0
 var countryToFind;
 var countryCount=0
-var wrongCount=0
 document.getElementById("replay").hidden=true;
 
 function startStudying() {
@@ -104,16 +103,13 @@ if(countryTotal>0){
     document.getElementById("message1").hidden=true;
     document.getElementById("message").hidden=false;
     document.getElementById("start").hidden=true;
-    document.getElementById("wrong").hidden=false;
     //randomize country list
     countriesClicked.sort(function() {return 0.5 - Math.random()});
     console.log("start studying with countries:"+countriesClicked);
     drawMapWithCountryList(countriesClicked);
 	document.getElementById("count").innerHTML=countryCount+" out of "+countryTotal
     countryToFind=countriesClicked[i];
-    document.getElementById("message").innerHTML="Click on "+countryToFind+".";
-    wrongCount=0
-    document.getElementById("wrong").innerHTML=wrongCount+" wrong answers."}
+    document.getElementById("message").innerHTML="Click on "+countryToFind+".";}
 }
 
 function checkCorrectCountry(countryName) {
@@ -122,8 +118,8 @@ function checkCorrectCountry(countryName) {
         countryCount++
         document.getElementById("count").innerHTML=countryCount+" out of "+countryTotal
         if (i<countriesClicked.length-1) {
-        	i++
-            countryToFind=countriesClicked[i]
+        	i++;
+            countryToFind=countriesClicked[i];
             document.getElementById("message").innerHTML="Good Job! You found "+countryName+". Now look for "+countryToFind+".";
         } else {
             document.getElementById("message").innerHTML="You found them all! Good job! I hope that you actually thought that this was a valuable way to study.";
@@ -132,8 +128,6 @@ function checkCorrectCountry(countryName) {
         }
     } else if(i<countriesClicked.length){
         document.getElementById("message").innerHTML="Nope. That is "+countryName+", not "+countryToFind+". Try again.";
-        wrongCount++
-        document.getElementById("wrong").innerHTML=wrongCount+" wrong answers."
     }
 }
 function playAgain(){document.getElementById("countriesDiv").hidden=false;
@@ -142,8 +136,19 @@ document.getElementById("replay").hidden=true;
 document.getElementById("start").hidden=false;
 document.getElementById("count").hidden=true;
 document.getElementById("message").hidden=true;
-document.getElementById("wrong").hidden=true;
 countryCount=0
 i=0
 }
 //hi
+
+function actualSelectAll() {
+	var table = document.getElementById("countries");
+	for (irow in table.rows) {
+		var row = table.rows[irow];
+		if (row.cells && row.cells.length>0) {
+			var cell = row.cells[0];
+			cell.className="deselectedCell";
+			clickCountryCell(cell);
+		}
+	}
+}
