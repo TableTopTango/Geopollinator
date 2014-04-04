@@ -16,12 +16,6 @@ function removeByValue(arr, val) {
     }
 }
 
-function selctAll() {
-	for(var jcells in table.cells) {
-		cell.className="deselectedCell";
-		clickCountryCell(cell);
-	}
-}
 
 var countryTotal=0
 function clickCountryCell(tableCell) {
@@ -134,6 +128,7 @@ function checkCorrectCountry(countryName) {
             document.getElementById("message").innerHTML="You found them all! Good job! I hope that you actually thought that this was a valuable way to study.";
             document.getElementById("replay").hidden=false;
             i++
+            countryCount--
         }
     } else if(i<countriesClicked.length){
         document.getElementById("message").innerHTML="Nope. That is "+countryName+", not "+countryToFind+". Try again.";
@@ -160,11 +155,10 @@ function actualSelectAll() {
 		var row = table.rows[irow];
 		if (row.cells && row.cells.length>0) {
 			var cell = row.cells[0];
-			cell.className="deselectedCell";
-			clickCountryCell(cell);
+			if(cell.className="deselectedCell"){
+			clickCountryCell(cell)}
 			document.getElementById("select").hidden=true;
 			document.getElementById("deselect").hidden=false;
-			
 		}
 	}
 }
@@ -174,7 +168,7 @@ var table = document.getElementById("countries");
 		var row = table.rows[irow];
 		if (row.cells && row.cells.length>0) {
 			var cell = row.cells[0];
-			cell.className="selectedCell";
-			clickCountryCell(cell);
+			if(cell.className="selectedCell"){
+			clickCountryCell(cell)}
 			document.getElementById("select").hidden=false;
 			document.getElementById("deselect").hidden=true;}}}
