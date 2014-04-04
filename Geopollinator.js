@@ -99,6 +99,7 @@ var countryToFind;
 var countryCount=0
 var wrongCount=0
 document.getElementById("replay").hidden=true;
+document.getElementById("deselect").hidden=true;
 
 function startStudying() {
 if(countryTotal>0){
@@ -161,6 +162,19 @@ function actualSelectAll() {
 			var cell = row.cells[0];
 			cell.className="deselectedCell";
 			clickCountryCell(cell);
+			document.getElementById("select").hidden=true;
+			document.getElementById("deselect").hidden=false;
+			
 		}
 	}
 }
+function deselectAll(){
+var table = document.getElementById("countries");
+	for (irow in table.rows) {
+		var row = table.rows[irow];
+		if (row.cells && row.cells.length>0) {
+			var cell = row.cells[0];
+			cell.className="selectedCell";
+			clickCountryCell(cell);
+			document.getElementById("select").hidden=false;
+			document.getElementById("deselect").hidden=true;}}}
