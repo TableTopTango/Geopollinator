@@ -12,9 +12,9 @@
       #container {
         /*background-image: url('http://www.html5canvastutorials.com/demos/assets/map-background.png');*/
         display: inline-block;
-        overflow: hidden;
-        height: 600px;/*262px;*/
-        width: 1200px;
+        overflow: scroll;
+        height: 100%;/*262px;*/
+        width: 100%;
         background-position: 1px 1px;
       }
       
@@ -37,7 +37,7 @@
       <input id="deselect" type="button" onclick="deselectAll();" value="Deselect All" />
   <p id="message"></p>
   <div id="zoomer" onmousedown="mouseDown(event, this);" onmouseup="mouseUp(event, this);" onmousemove="mouseMove(event, this);" onmousewheel="scroll(event, this);" onmouseover="mouseover(event, this);" onmouseout="mouseout(event, this);">
-    <div id="container" hidden="true" hidden></div>
+    <div id="container"></div>
     </div>
     <script src="Kinetic.js"></script>
     <!--<script src="http://www.html5canvastutorials.com/demos/assets/worldMap.js"></script>-->
