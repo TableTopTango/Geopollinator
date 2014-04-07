@@ -155,7 +155,7 @@ function actualSelectAll() {
 		var row = table.rows[irow];
 		if (row.cells && row.cells.length>0) {
 			var cell = row.cells[0];
-			if(cell.className="deselectedCell"){
+			if(cell.className!=="selectedCell"){
 			clickCountryCell(cell)}
 			document.getElementById("select").hidden=true;
 			document.getElementById("deselect").hidden=false;
@@ -168,7 +168,7 @@ var table = document.getElementById("countries");
 		var row = table.rows[irow];
 		if (row.cells && row.cells.length>0) {
 			var cell = row.cells[0];
-			if(cell.className="selectedCell"){
+			if(cell.className==="selectedCell"){
 			clickCountryCell(cell)}
 			document.getElementById("select").hidden=false;
 			document.getElementById("deselect").hidden=true;}}}
