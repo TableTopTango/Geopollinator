@@ -104,6 +104,7 @@ if(countryTotal>0){
     document.getElementById("start").hidden=true;
     document.getElementById("wrong").hidden=false;
     document.getElementById("select").hidden=true;
+    document.getElementById("deselect").hidden=true;
     //randomize country list
     countriesClicked.sort(function() {return 0.5 - Math.random()});
     console.log("start studying with countries:"+countriesClicked);
