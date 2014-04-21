@@ -53,9 +53,13 @@ function drawMapWithCountryList(countryList) {
                 mapLayer.draw();
                 topLayer.draw();
                 });
-        
+    	
         path.on('click', function() {
                 checkCorrectCountry(this.fullName);
+                if(a){this.setFill('green')}
+                else{this.setFill('red')};
+                this.moveTo(topLayer);
+                topLayer.drawScene();
                 });
         
         mapLayer.add(path);

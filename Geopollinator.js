@@ -115,10 +115,11 @@ if(countryTotal>0){
     wrongCount=0
     document.getElementById("wrong").innerHTML=wrongCount+" wrong answers."}
 }
-
+var a;
 function checkCorrectCountry(countryName) {
     if (countryName==countryToFind) {
         //success
+        a=true
         countryCount++
         document.getElementById("count").innerHTML=countryCount+" out of "+countryTotal
         if (i<countriesClicked.length-1) {
@@ -132,6 +133,7 @@ function checkCorrectCountry(countryName) {
             countryCount--
         }
     } else if(i<countriesClicked.length){
+    	a=false
         document.getElementById("message").innerHTML="Nope. That is "+countryName+", not "+countryToFind+". Try again.";
         wrongCount++
         document.getElementById("wrong").innerHTML=wrongCount+" wrong answers."
