@@ -1,5 +1,5 @@
-var WIDTH=1200;
-var HEIGHT=600;
+var WIDTH=window.innerWidth;
+var HEIGHT=window.innerHeight;;
 
 var MAX_BORDER = 30;
 
@@ -68,9 +68,9 @@ function drawMapWithCountryList(countryList) {
     stage.add(topLayer);
     
     //now go through paths, finding bounds.
-    var minX = 1200;
+    var minX = window.innerWidth;
     var maxX = 0;
-    var minY = 600;
+    var minY = window.innerHeight;;
     var maxY = 0;
     
     for (var i in paths) {
