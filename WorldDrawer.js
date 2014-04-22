@@ -33,7 +33,7 @@ function drawMapWithCountryList(countryList) {
                                     data: worldmap.shapes[key],
                                     fill: '#eee',
                                     stroke: '#555',
-                                    strokeWidth: 1
+                                    strokeWidth: .2
                                     });
         
         paths.push(path);
