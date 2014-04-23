@@ -1,0 +1,39 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image:url("background.jpg");
+    font-family: 'Open Sans', Arial;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+     
+#container {
+    /*background-image: url('http://www.html5canvastutorials.com/demos/assets/map-background.png');*/
+    height: auto;
+    width: 100%;
+    background-position: 1px 1px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+      
+#countriesDiv {
+    overflow:scroll;
+    height:200px;
+}
+
+.selectedCell {
+    background-color:blue;
+    color:white;
+}
+
+#center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+

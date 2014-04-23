@@ -1,60 +1,52 @@
 <!--http://www.html5canvastutorials.com/labs/html5-canvas-world-map-svg-path-with-kineticjs/ -->
 <!DOCTYPE HTML>
 <html>
-  <head>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<head>
+		<!-- I've put your CSS in a seperate document called 'style.css' --> 
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- I've also linked a google font in as I've used a font called 'Open Sans' -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-50218618-1', 'hhscp.org');
-  ga('send', 'pageview');
+		  ga('create', 'UA-50218618-1', 'hhscp.org');
+		  ga('send', 'pageview');
 
-</script>
-    <style>
-      body {
-        margin: 0px;
-        padding: 0px;
-        background-image:url("Background.jpg");
-      }
-     
-      #container {
-        /*background-image: url('http://www.html5canvastutorials.com/demos/assets/map-background.png');*/
-        display: inline-block;
-        overflow: scroll;
-        height: 100%;/*262px;*/
-        width: 100%;
-        background-position: 1px 1px;
-      }
-      
-    #countriesDiv {
-        overflow:scroll;
-        height:200px;
-    }
-    .selectedCell {
-        background-color:blue;
-        color:white
-    }
-    </style>
-  </head>
-  <body>
-      <p id="message1">Select Countries to Study</p><p id="count"></p> <p id="wrong"></p>
-      <div id="countriesDiv"><table id="countries"></table></div>
-      <div id="start"><input type="button" onclick="startStudying();" value="Start Studying" /></div>
-      <div id="replay"><input type="button" onclick="playAgain();" value="Play again" /></div>
-      <input id="select" type="button" onclick="actualSelectAll();" value="Select All" />
-      <input id="deselect" type="button" onclick="deselectAll();" value="Deselect All" />
-  <p id="message"></p>
-  <div id="zoomer" onmousedown="mouseDown(event, this);" onmouseup="mouseUp(event, this);" onmousemove="mouseMove(event, this);" onmousewheel="scroll(event, this);" onmouseover="mouseover(event, this);" onmouseout="mouseout(event, this);">
-    <div id="container"></div>
-    </div>
-    <script src="Kinetic.js"></script>
-    <!--<script src="http://www.html5canvastutorials.com/demos/assets/worldMap.js"></script>-->
-    <script src="rapscript.js"></script>
-    <script src="WorldDrawer.js"></script>
-    <script src="Geopollinator.js"></script>
-    <a href="mailto:geopollinator@gmail.com?Subject=Geo Support" target="_top"> Send Support Email </a>
-  </body>
+		</script>
+  	</head>
+  	<body>
+  	<!-- Hi there, I've reformatted and made the document easier to read and more compact code-wise -->
+  		<h1>Geopollinator</h1>
+   	  	
+   	  	<p id="message1">Select Countries you wish to study.</p><p id="count"></p> <p id="wrong"></p>
+
+      	<div id="countriesDiv"><table id="countries"></table></div>
+      	<div id="start"><input type="button" onclick="startStudying();" value="Start Studying" /></div>
+
+      	<div id="replay"><input type="button" onclick="playAgain();" value="Play again" /></div>
+
+      	<input id="select" type="button" onclick="actualSelectAll();" value="Select All" />
+
+      	<input id="deselect" type="button" onclick="deselectAll();" value="Deselect All" />
+
+      	<p>Use your mouse tracker to zoom in and out of the map. We're currently trying to fix this!</p>
+
+  	<p id="message"></p>
+
+  	<div id="zoomer" onmousedown="mouseDown(event, this);" onmouseup="mouseUp(event, this);" onmousemove="mouseMove(event, this);" onmousewheel="scroll(event, this);" onmouseover="mouseover(event, this);" onmouseout="mouseout(event, this);">
+    	<div id="container"></div>
+    	</div>
+
+    	<!-- Place scripts at the bottom to load quicker!!!! -->
+    	<script src="Kinetic.js"></script>
+    	<!--<script src="http://www.html5canvastutorials.com/demos/assets/worldMap.js"></script>-->
+    	<script src="rapscript.js"></script>
+    	<script src="WorldDrawer.js"></script>
+    	<script src="Geopollinator.js"></script>
+    	<a href="mailto:geopollinator@gmail.com?Subject=Geo Support" target="_top"> Send Support Email </a>
+  	</body>
 </html>
 <!--hi
