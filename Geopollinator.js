@@ -92,8 +92,10 @@ var i=0
 var countryToFind;
 var countryCount=0
 var wrongCount=0
+var individualWrongCount=0
 document.getElementById("replay").hidden=true;
 document.getElementById("deselect").hidden=true;
+document.getElementById("giveup").hidden=true
 
 function startStudying() {
 if(countryTotal>0){
@@ -121,13 +123,20 @@ function checkCorrectCountry(countryName) {
         //success
         a=true
         countryCount++
+        individualWrongCount=0
+        document.getElementById("giveup").hidden=true
         document.getElementById("count").innerHTML=countryCount+" out of "+countryTotal
         if (i<countriesClicked.length-1) {
         	i++;
             countryToFind=countriesClicked[i];
             document.getElementById("message").innerHTML="Good Job! You found "+countryName+". Now look for "+countryToFind+".";
         } else {
-            document.getElementById("message").innerHTML="You found them all! Good job! I hope that you actually thought that this was a valuable way to study.";
+        if(countryTotal-countryCount===0){
+            document.getElementById("message").innerHTML="You found them all! Good job! I hope that you actually thought that this was a valuable way to study."}
+        else if(countryTotal-countryCount===1){
+        	document.getElementById("message").innerHTML="You have finished! But you skipped a country."}
+        else{
+        	document.getElementById("message").innerHTML="You have finished! But you skipped "+(countryTotal-countryCount)+" countries."}
             document.getElementById("replay").hidden=false;
             i++
             countryCount--
@@ -136,7 +145,9 @@ function checkCorrectCountry(countryName) {
     	a=false
         document.getElementById("message").innerHTML="Nope. That is "+countryName+", not "+countryToFind+". Try again.";
         wrongCount++
+        individualWrongCount++
         document.getElementById("wrong").innerHTML=wrongCount+" wrong answers."
+        if(individualWrongCount>9){document.getElementById("giveup").hidden=false}
     }
 }
 function playAgain(){document.getElementById("countriesDiv").hidden=false;
@@ -175,3 +186,14 @@ var table = document.getElementById("countries");
 			clickCountryCell(cell)}
 			document.getElementById("select").hidden=false;
 			document.getElementById("deselect").hidden=true;}}}
+function giveUp(){
+	i++
+	countryToFind=countriesClicked[i];
+	if (i<countriesClicked.length){
+	document.getElementById("message").innerHTML="Click on "+countryToFind+"."}
+	else{document.getElementById("message").innerHTML="You have finished! But you skipped "+(countryTotal-countryCount)+" countries.";
+            document.getElementById("replay").hidden=false;
+            i++
+            countryCount--}
+	document.getElementById("giveup").hidden=true
+	individualWrongCount=0}
