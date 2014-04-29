@@ -2,6 +2,8 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+  	<link rel="stylesheet" type="text/css" href="style.css">
+  	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -13,50 +15,40 @@
 
 </script>
 	<link rel="shortcut icon" href="bee.ico"/>
-    <style>
-      body {
-        margin: 0px;
-        padding: 0px;
-        background-image:url("Background.jpg");
-      }
-     
-      #container {
-        /*background-image: url('http://www.html5canvastutorials.com/demos/assets/map-background.png');*/
-        display: inline-block;
-        overflow: scroll;
-        height: 100%;/*262px;*/
-        width: 100%;
-        background-position: 1px 1px;
-      }
-      
-    #countriesDiv {
-        overflow:scroll;
-        height:200px;
-    }
-    .selectedCell {
-        background-color:blue;
-        color:white
-    }
-    </style>
+    
   </head>
   <body>
+  	<center><h1>Geopollinator</h1>
+  	
+  	</center>
+  	
+      
+      
       <p id="message1">Select Countries to Study</p><p id="count"></p> <p id="wrong"></p>
+      	
       <div id="countriesDiv"><table id="countries"></table></div>
+      
       <div id="start"><input type="button" onclick="startStudying();" value="Start Studying" /></div>
+      
       <div id="replay"><input type="button" onclick="playAgain();" value="Play again" /></div>
+      
       <input id="select" type="button" onclick="actualSelectAll();" value="Select All" />
+      
       <input id="deselect" type="button" onclick="deselectAll();" value="Deselect All" />
-      <input id="giveup" type="button" onclick="giveUp();" value="Skip this country?" />
-  <p id="message"></p>
-  <div id="zoomer" onmousedown="mouseDown(event, this);" onmouseup="mouseUp(event, this);" onmousemove="mouseMove(event, this);" onmousewheel="scroll(event, this);" onmouseover="mouseover(event, this);" onmouseout="mouseout(event, this);">
-    <div id="container"></div>
-    </div>
-    <script src="Kinetic.js"></script>
-    <!--<script src="http://www.html5canvastutorials.com/demos/assets/worldMap.js"></script>-->
-    <script src="rapscript.js"></script>
-    <script src="WorldDrawer.js"></script>
-    <script src="Geopollinator.js"></script>
-    <a href="mailto:geopollinator@gmail.com?Subject=Geo Support" target="_top"> Send Support Email </a>
+      
+      <p id="message"></p>
+      
+      <div id="zoomer" onmousedown="mouseDown(event, this);" onmouseup="mouseUp(event, this);" onmousemove="mouseMove(event, this);" onmousewheel="scroll(event, this);" onmouseover="mouseover(event, this);" onmouseout="mouseout(event, this);">
+      <div id="container"></div>
+      </div>
+      
+      <script src="Kinetic.js"></script>
+      <!--<script src="http://www.html5canvastutorials.com/demos/assets/worldMap.js"></script>-->
+      <script src="rapscript.js"></script>
+      <script src="WorldDrawer.js"></script>
+      <script src="Geopollinator.js"></script>
+      <a href="mailto:geopollinator@gmail.com?Subject=Geo Support" target="_top"> Send Support Email </a>
+      <p id="small">The background image used is from <a href="https://www.flickr.com/photos/80497449@N04/">Nicolas Raymond</a> who has licensed this image for use under the Creative Commons License.</a></p>
   </body>
 </html>
 <!--hi
