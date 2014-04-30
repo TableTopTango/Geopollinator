@@ -58,7 +58,7 @@ function mouseMove(event, obj) {
     }
 }
 
-var ZOOM_FACTOR = .0001;
+var ZOOM_FACTOR = .001;
 function scroll(event, obj) {
     var currentScale = stage.scaleX();
     var factor = ZOOM_FACTOR*Math.abs(event.wheelDelta)+1;
@@ -68,11 +68,11 @@ function scroll(event, obj) {
     var newScale = currentScale*factor;
     if (newScale > 10) {
     	newScale = 10;
-    	factor=1;
+    	factor=newScale/currentScale;
     }
     if (newScale < 1) {
     	newScale = 1;
-    	factor = 1;
+    	factor = newScale/currentScale;
     }
     var centerX = event.pageX-obj.offsetLeft;
     var centerY = event.pageY-obj.offsetTop;
