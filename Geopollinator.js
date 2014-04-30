@@ -104,6 +104,7 @@ var individualWrongCount=0
 document.getElementById("replay").hidden=true;
 document.getElementById("deselect").hidden=true;
 document.getElementById("giveup").hidden=true
+document.getElementById("stop").hidden=true
 
 
 function startStudying() {
@@ -116,6 +117,7 @@ if(countryTotal>0){
     document.getElementById("wrong").hidden=false;
     document.getElementById("select").hidden=true;
     document.getElementById("deselect").hidden=true;
+    document.getElementById("stop").hidden=false
     //randomize country list
     countriesClicked.sort(function() {return 0.5 - Math.random()});
     console.log("start studying with countries:"+countriesClicked);
@@ -149,6 +151,7 @@ function checkCorrectCountry(countryName) {
             document.getElementById("replay").hidden=false;
             i++
             countryCount--
+            document.getElementById("stop").hidden=true
         }
     } else if(i<countriesClicked.length){
     	a=false
@@ -167,7 +170,11 @@ document.getElementById("count").hidden=true;
 document.getElementById("message").hidden=true;
 document.getElementById("wrong").hidden=true;
 document.getElementById("select").hidden=false;
+document.getElementById("stop").hidden=true
+document.getElementById("giveup").hidden=true
 countryCount=0
+wrongCount=0
+individualWrongCount=0
 i=0
 }
 //hi
@@ -203,6 +210,7 @@ function giveUp(){
 	else{document.getElementById("message").innerHTML="You have finished! But you skipped "+(countryTotal-countryCount)+" countries.";
             document.getElementById("replay").hidden=false;
             i++
-            countryCount--}
+            countryCount--
+            document.getElementById("stop").hidden=true}
 	document.getElementById("giveup").hidden=true
 	individualWrongCount=0}
