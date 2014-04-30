@@ -1,7 +1,9 @@
 body {
     margin: 0px;
+    height; 100%
+    width; 100%
     padding: 0px;
-    background-image:url("background.png");
+    background-color:#4cbceb;
     font-family: 'Open Sans', Arial;
 }
 
@@ -17,6 +19,7 @@ h1 {
     height: auto;
     width: 100%;
     background-position: 1px 1px;
+    background-image:url("background.png");
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
@@ -28,11 +31,19 @@ h1 {
     height:200px;
 }
 
+#map {
+	position:absolute;
+	z-index: inherit;
+	
+}
 .selectedCell {
     background-color:blue;
     color:white;
 }
-
+#headingbackground {
+	background-color:#4cbceb;
+	
+}
 #small{
 font-size: 11px;
 }
