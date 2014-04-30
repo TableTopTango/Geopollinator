@@ -6,7 +6,9 @@ body {
     background-color:#4cbceb;
     font-family: 'Open Sans', Arial;
 }
-
+p,div {
+	margin: 2px 2px 2px 2px
+} 
 h1 {
     font-size: 40px;
     text-align: center;
