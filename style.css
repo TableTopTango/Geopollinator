@@ -22,6 +22,9 @@ h1 {
     width: 100%;
     background-position: 1px 1px;
     /*background-image:url("background.png");*/
+    border-top-style:solid;
+    border-top-color:black;
+    border-top-width:4px;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
