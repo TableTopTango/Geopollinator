@@ -105,6 +105,7 @@ document.getElementById("replay").hidden=true;
 document.getElementById("deselect").hidden=true;
 document.getElementById("giveup").hidden=true
 document.getElementById("stop").hidden=true
+document.getElementById("center").hidden=true
 
 
 function startStudying() {
@@ -118,6 +119,7 @@ if(countryTotal>0){
     document.getElementById("select").hidden=true;
     document.getElementById("deselect").hidden=true;
     document.getElementById("stop").hidden=false
+    document.getElementById("center").hidden=false
     //randomize country list
     countriesClicked.sort(function() {return 0.5 - Math.random()});
     console.log("start studying with countries:"+countriesClicked);
@@ -152,6 +154,7 @@ function checkCorrectCountry(countryName) {
             i++
             countryCount--
             document.getElementById("stop").hidden=true
+            document.getElementById("center").hidden=true
         }
     } else if(i<countriesClicked.length){
     	a=false
@@ -171,6 +174,7 @@ document.getElementById("message").hidden=true;
 document.getElementById("wrong").hidden=true;
 document.getElementById("select").hidden=false;
 document.getElementById("stop").hidden=true
+document.getElementById("center").hidden=true
 document.getElementById("giveup").hidden=true
 countryCount=0
 wrongCount=0
@@ -211,6 +215,15 @@ function giveUp(){
             document.getElementById("replay").hidden=false;
             i++
             countryCount--
-            document.getElementById("stop").hidden=true}
+            document.getElementById("stop").hidden=true
+            document.getElementById("center").hidden=true}
 	document.getElementById("giveup").hidden=true
 	individualWrongCount=0}
+function center(){
+		position = {'x':0.0, 'y':0.0};
+        stage.setPosition(position);
+        stage.scaleX(1);
+    	stage.scaleY(1);
+        mapLayer.draw();
+        topLayer.draw();
+}
