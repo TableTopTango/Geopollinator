@@ -17,9 +17,8 @@ like to study.
 
 ##Our visual will be as follows:
 The home screen will have a select list of commonly studied country
-groups (Europe, Middle East etc.). On the top of the page is the main
-opener [what is an "opener?"], it will have a country selection list, 
-and the user will select
+groups (Europe, Middle East etc.). When coming to the correct URL, it will have a country selection list, 
+and the user will select 
 which countries they wish to study. Based on the farthest to the left,
 to the right, down, and up it will set the area that the program zooms in
 on. If the country is smaller than a certain size, and the user misses
