@@ -1,8 +1,9 @@
-var converter = function(){
-	var convert = prompt("Degrees north, enter as negative if south.");
-	var convert2 = prompt("Degrees east, enter as negative if west.");
-	(convert + 90)*(1000./360) = var newconvert;
-	(convert2 + 180)*(1000./360) = var newconvert2;
-	document.write(newconvert);
-	document.write(newconvert2);
+function converter(){
+	var convert = parseFloat(document.getElementById("NorthSouth").value);
+	var convert2 = parseFloat(document.getElementById("EastWest").value);
+	var newconvert = (convert + 90)*(1000./360);
+	var newconvert2 = (convert2 + 180)*(1000./360);
+	document.writeln(newconvert);
+	
+	document.writeln(newconvert2);
 }
