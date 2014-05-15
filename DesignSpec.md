@@ -26,4 +26,4 @@ We will have humans do the testing. They will be testing general functionality, 
 Javascript is not able to be debugged in eclipse so in order to test the debugging capabilities of the program we are going to have to use google chrome to debug the software.
 
 ##Software Deployment Instructions
-We are going to place the software on netdenizen.com. This will allow us to get it out to the general public so long as they have the link to the website. The files from our Geopollinator account will simply be the .css .html and .js files, the DS and FS are for our fictional employer and are only necessary for the class, not the general public so they will not be included. We will set up a deployment account on github.
+We are going to place the software on hhscp.com. This will allow us to get it out to the general public so long as they have the link to the website. The files from our Geopollinator account will simply be the .css .html and .js files, the DS and FS are for our fictional employer and are only necessary for the class, not the general public so they will not be included. We will set up a deployment account on github.
