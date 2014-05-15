@@ -106,6 +106,7 @@ document.getElementById("deselect").hidden=true;
 document.getElementById("giveup").hidden=true
 document.getElementById("stop").hidden=true
 document.getElementById("center").hidden=true
+document.getElementById("zoomer").hidden=true
 
 
 function startStudying() {
@@ -120,6 +121,7 @@ if(countryTotal>0){
     document.getElementById("deselect").hidden=true;
     document.getElementById("stop").hidden=false
     document.getElementById("center").hidden=false
+    document.getElementById("zoomer").hidden=false
     //randomize country list
     countriesClicked.sort(function() {return 0.5 - Math.random()});
     console.log("start studying with countries:"+countriesClicked);
@@ -176,6 +178,7 @@ document.getElementById("select").hidden=false;
 document.getElementById("stop").hidden=true
 document.getElementById("center").hidden=true
 document.getElementById("giveup").hidden=true
+document.getElementById("zoomer").hidden=true
 countryCount=0
 wrongCount=0
 individualWrongCount=0
